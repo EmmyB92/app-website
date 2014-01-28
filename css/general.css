@@ -3,14 +3,47 @@ h1 {
 	color: #609;
 	font-size: 2em;
 	text-decoration: none;
+	background-color: #DAB576;
+	padding: 0.5em;
 }
 
 h2 {
 	font-family:"Arial Black", Gadget, sans-serif;
 	color: #F60;
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #609;
+	padding-bottom: 1em;
+	padding-right: 1em;
+}
+
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3em;
+	color: #F60;
+	float: right;
+	display: inline;
+	padding-bottom: 1em;
+	font-weight: bold;
+}
+
+.masthead {
+	background-color: #79F59A;
+	height: 110px;
+}
+	
+.logo {
+	width: 10%;
+}
+
+footer {
+	position: fixed;
+	float: left;
+}
 .unit-1{
 	float: right;
 	display: inline-block;
@@ -20,7 +53,211 @@ h2 {
 	float: left;
 	display: inline-block;
 }
+
+.carousel {
+	position: inherit;
+	float: left;
+	padding-left: 10%;
+	padding-bottom: 20%;
+	background-color: #DAB576;
+}
+
+.carousel img {
+	left: 0;
+	top: 0;
+	border-radius: 16px;
+	border: 9px solid #fff;
+	max-width: 50%;
+}
+
+.items {
+	padding: 1em;
+}
+
+.next {
+	position: relative;
+	float: left;
+	z-index: 1000;
+	cursor: pointer;
+	background-color: #79F59A;
+	width: 60px;
+	height: 24px;
+	border-radius: 16px;
+	border: 2px solid #fff;
+	color: #606;
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
+}
+
+.previous {
+	position: relative;
+	float: left;
+	z-index: 1000;
+	cursor: pointer;
+	background-color: #F93;
+	width: 66px;
+	height: 24px;
+	border-radius: 16px;
+	border: 2px solid #fff;
+	color: #606;
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
+}
+
+.download {
+	margin-right: 1em;
+	position: relative;
+	float: right;
+	z-index: 1000;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #F93;
+	width: 78px;
+	height: 40px;
+	border-radius: 16px;
+	border: 2px solid #fff;
+	color: #606;
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
+}
+
+.carousel [data-state="current"] {
+	z-index: 100;
+}
+
+.carousel [data-state="incoming"] {
+	z-index: 101;
+}
 	
+dialog {
+	border-radius: 6px;
+	border: 1px solid #333;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	padding: 1em;
+}
+
+dialog::backdrop {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+dialog + .backdrop {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+.btn-close {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	border: 2px solid #fff;
+	background-color: #000;
+	color: #fff;
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
+	font-weight: bold;
+	line-height: 0.6;
+	font-size: 1rem;
+	cursor: pointer;
+	position: absolute;
+	right: -16px;
+	top: -16px;
+}
+.grid {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  background-color: #FFF;
+}
+.opera-only :-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+.unit {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  float: right;
+  letter-spacing: normal;
+  text-rendering: auto;
+  vertical-align: top;
+  word-spacing: normal;
+  margin-bottom:10px;
+}
+.unit-spacer {
+  padding: 8px;
+}
+@media only screen and (max-width: 38em) {
+  .unit-s-hidden {
+    display: none;
+    visibility: hidden;
+  }
+  .unit-s-1 {
+    display: block;
+  }
+  .unit-s-1-2 {
+    width: 50%;
+  }
+  .unit-s-1-3 {
+    width: 33.33333%;
+  }
+  .unit-s-2-3 {
+    width: 66.66667%;
+  }
+  .unit-s-1-4 {
+    width: 25%;
+  }
+  .unit-s-3-4 {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60em) {
+  .unit-m-hidden {
+    display: none;
+    visibility: hidden;
+  }
+  .unit-m-1 {
+    display: block;
+  }
+  .unit-m-1-2 {
+    width: 50%;
+  }
+  .unit-m-1-3 {
+    width: 33.33333%;
+  }
+  .unit-m-2-3 {
+    width: 66.66667%;
+  }
+  .unit-m-1-4 {
+    width: 25%;
+  }
+  .unit-m-3-4 {
+    width: 75%;
+  }
+  
+}
+@media only screen and (min-width: 60em) {
+  .unit-l-hidden {
+    display: none;
+    visibility: hidden;
+  }
+  .unit-l-1 {
+    display: block;
+  }
+  .unit-l-1-2 {
+    width: 50%;
+  }
+  .unit-l-1-3 {
+    width: 33.33333%;
+  }
+  .unit-l-2-3 {
+    width: 66.66667%;
+	display: inline-block;
+	float: left;
+}
+  .unit-l-1-4 {
+    width: 25%;
+  }
+  .unit-l-3-4 {
+    width: 75%;\
+  }
+}
 @media only screen and (min-width: 38em){
 
 h1{ 
