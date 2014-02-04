@@ -18,28 +18,42 @@
 	<h1>
 	YogaGo! is a revolutionary app for yoga lovers worldwide! 
 	</h1>
-	</div>	
+</div>	
 </div>
 
 <div class="grid">
 	<div class="unit unit-m-1-2 unit-l-1-3">
-	<a class="btn-open" href="#">Open!</a>
+	<a class="btn-open" href="#">Open Video</a>
+	<button class="download">Download Now!</button>
 	<dialog>
 		<div class="video"></div>
-		<button class="btn-close">X</button>
+		<button class="btn-close">x</button>
 	</dialog>
+</div>
 </div>
 
 <div class="grid">
 	<div class="unit unit-m-1-2 unit-l-1-3">
 
-	<button class="download">Download Now!</button>
 	<h2>
 		Yoga Anytime. Everywhere.
+		<section class="sun-section">
+		<img class="sun" src="img/logo.png" alt="">
+	</section>
 	</h2>
 	
 	<p>Now you can take your yoga practice anywhere in the world! On vacation, in a forest, at the park, at a friends house, in your own backyard...with the YogaGo! app you now have the freedom to follow a guided yoga routine any place you desire.</p>
-</div>	
+</div>
+</div>
+
+<section class="logo-section">
+	<ul class="logos">
+	 <li><img src="img/lotus.png" alt=""></li>
+	 <li><img src="img/healing.png" alt=""></li>
+	</ul>
+</section>
+
+<div class="carousel-wrapper">
 <div class="carousel">
 		<div class="items">
 			<img data-state="current" src="img/first.png" alt="main screen">
@@ -52,11 +66,12 @@
 		<button class="previous">Previous</button>
 	</div>		
 </div>
-</div>	
 </div>
 
+
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/waypoints.min.js"></script>
 <script src="js/dialog-polyfill.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
