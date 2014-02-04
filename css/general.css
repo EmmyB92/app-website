@@ -44,30 +44,41 @@ footer {
 	position: fixed;
 	float: left;
 }
-.unit-1{
-	float: right;
-	display: inline-block;
+
+.sun {
+	max-width: 150px;
 }
 
-.unit{
-	float: left;
-	display: inline-block;
+.sun-section {
+	padding: 0 2em;
+}
+
+.carousel-wrapper {
+	width: 50%;
+	float: right;
+	display: inline;
+	margin: 1em;
+	background-color: #DAB576;
+	padding: 2em 5em;
 }
 
 .carousel {
-	position: inherit;
-	float: left;
-	padding-left: 10%;
-	padding-bottom: 20%;
+	position: relative;
+	/*float: left;*/
+	/*padding-left: 10%;*/
+	padding-bottom: 187.5%;
 	background-color: #DAB576;
 }
 
 .carousel img {
 	left: 0;
 	top: 0;
+	position: absolute;
 	border-radius: 16px;
 	border: 9px solid #fff;
-	max-width: 50%;
+	/*max-width: 50%;*/
+	width: 100%;
+	height: 100%;
 }
 
 .items {
@@ -82,6 +93,20 @@ footer {
 	background-color: #79F59A;
 	width: 60px;
 	height: 24px;
+	border-radius: 16px;
+	border: 2px solid #fff;
+	color: #606;
+	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
+}
+
+.btn-open {
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	position: relative;
+	z-index: 1000;
+	cursor: pointer;
+	background-color: #79F59A;
+	padding: 1em 2em;
 	border-radius: 16px;
 	border: 2px solid #fff;
 	color: #606;
@@ -147,7 +172,7 @@ dialog + .backdrop {
 	height: 32px;
 	border-radius: 16px;
 	border: 2px solid #fff;
-	background-color: #000;
+	background-color: #F93;
 	color: #fff;
 	box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.5);
 	font-weight: bold;
@@ -159,6 +184,7 @@ dialog + .backdrop {
 	top: -16px;
 }
 .grid {
+	float: left;
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -173,7 +199,6 @@ dialog + .backdrop {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  float: right;
   letter-spacing: normal;
   text-rendering: auto;
   vertical-align: top;
@@ -183,6 +208,49 @@ dialog + .backdrop {
 .unit-spacer {
   padding: 8px;
 }
+
+.logos {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align:center;
+}
+
+.logos li {
+	display: inline-block;
+}
+
+.logos img {
+	width: 140px;
+	opacity: 0;
+	-webkit-transform: translateY(140px);
+}
+
+.js-logos-animate {
+	-webkit-animation: logo-fly 1s ease-out 1 forwards;
+}
+@-webkit-keyframes logo-fly {
+	0%{
+		opacity: 0;
+	-webkit-transform: translateY(140px);
+	}
+	40%{ 
+		opacity: 1;
+	}
+	100%{
+	-webkit-transform:translateY(0);
+	opacity: 1;
+	}
+}
+	
+.js-logo-delay-1{
+	-webkit-animation-delay:100ms;
+}
+
+.js-logo-delay-2{
+	-webkit-animation-delay:200ms;
+}
+
 @media only screen and (max-width: 38em) {
   .unit-s-hidden {
     display: none;
