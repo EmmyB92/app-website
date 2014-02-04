@@ -1,3 +1,20 @@
+var $win = $(window);
+var $sun = $('.sun');
+
+$win.on('scroll', function (){
+	//console.log($win.scrollTop());
+	$sun.css('transform', 'rotate('+ $win.scrollTop()/5 + 'deg)');
+});
+
+
+$('.logo-section').waypoint(function () {
+	$logos.eq(0).addClass('js-logo-delay-1');
+	$logos.eq(2).addClass('js-logo-delay-2');
+	$logos.addClass('js-logo-animate');
+}, {offset: '60%' });
+
+
+
 var $items = $('.items img');
 
 var switchItem = function (current, incoming) {
@@ -37,7 +54,7 @@ var $videoDialog = $('dialog');
 dialogPolyfill.registerDialog($videoDialog.get(0));
 
 $('.btn-open').on('click', function () {
-	$videoDialog.children('.video').html('<iframe src="http://player.vimeo.com/video/68787849?color=c9ff23&amp;autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+	$videoDialog.children('.video').html('<iframe src="http://player.vimeo.com/video/81371389?color=81ebc6" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 	
 	/* When triggering built-in Javascript functions we need to bypass jQuery. In order to get to the raw Javascript element we can use .get()
 	Ex: $videoDialog.show() – will trigger jQuery's show function not the raw Javascript show function
